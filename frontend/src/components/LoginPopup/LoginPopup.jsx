@@ -22,45 +22,6 @@ const LoginPopup = ({ setShowLogin }) => {
     setFormData({ ...formData, [name]: value });
   };
 
-  // useEffect(() => {
-  //   console.log(formData);
-  // }, [formData]);
-
-//   const submitHandler = async (e) => {
-//     e.preventDefault();
-//     let newUrl = url;
-
-//     if (currState === "Login") {
-//         newUrl += "/api/users/login";
-//     } else {
-//         newUrl += "/api/users/register";
-//     }
-
-//     console.log("Request URL:", newUrl);
-//     console.log("Form Data:", formData);
-
-//     try {
-//         const response = await axios.post(newUrl, formData);
-//         console.log("Response:", response);
-
-//         if (response.data.status) {
-//             const token = response.data.token;
-//             console.log("Token received:", token);
-
-//             setToken(token);
-//             localStorage.setItem("token", token);
-//             console.log("Token stored in localStorage");
-
-//             setShowLogin(false);
-//         } else {
-//             alert(response.data.message);
-//         }
-//     } catch (error) {
-//         console.error("Error during submission:", error);
-//         alert("An error occurred. Please try again.");
-//     }
-// };
-
 const submitHandler = async (e) => {
   e.preventDefault();
   let newUrl = url;
